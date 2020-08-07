@@ -12,8 +12,8 @@ spring:
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource # 當前數據源操作類型
-    driver-class-name: com.mysql.jdbc.Driver # mysql驅動包
-    url: jdbc:mysql://localhost:3306/cloudDB01 # 資料庫名稱
+    driver-class-name: com.mysql.cj.jdbc.Driver # mysql驅動包
+    url: jdbc:mysql://localhost:3306/cloudDB01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC # 資料庫名稱
     username: root
     password: sa123456
     dbcp2:
