@@ -1,0 +1,11 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: localhost #eureka 服務端的實例名稱
+  client:
+    register-with-eureka: false #false表示不像註冊中心 註冊自己
+    fetch-registry: false #false表示自己端就是註冊中心 我的職責是維護服務實例 並不需要 去檢索服務
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #設置與Eureka Server交互的地址查詢服務和註冊職務需要依賴這個地址
